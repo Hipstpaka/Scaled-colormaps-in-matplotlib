@@ -51,7 +51,8 @@ from the file colormap_scaling.py in this repository achieves. Assume you want t
 Then, to 'spread' the white transition region use the scaled_cmap function with an exponent larger than 1:
 
 ```
-rescaled_cmap = scaled_cmap('bwr',2)
+from colormap_scaling import scaled_colormap
+rescaled_cmap = scaled_colormap('bwr',2)
 ```
 resulting in:
 
@@ -60,7 +61,7 @@ resulting in:
 Using this rescaled colormap for our data results in:
 
 ```
-plt.imshow(data, cmap = scaled_cmap('bwr',2), norm = norm)
+plt.imshow(data, cmap = scaled_colormap('bwr',2), norm = norm)
 plt.colorbar()
 ```
 
@@ -70,14 +71,12 @@ plt.colorbar()
 In this plot the white region is much larger due to the rescaled colormap. By using an exponent smaller than one, we can also make the transition region look 'smaller':
 
 ```
-plt.imshow(data, cmap = scaled_cmap('bwr',0.5), norm = norm)
+plt.imshow(data, cmap = scaled_colormap('bwr',0.5), norm = norm)
 plt.colorbar()
 ```
 
 ![small_transition_region](https://user-images.githubusercontent.com/37422619/121493288-f9bd0c80-c9d7-11eb-979a-60f886201cad.png)
 
-To use the function scaled_colormap download the file colormap_scaling.py and import the function scaled_colormap with
 
-```
-from colormap_scaling import scaled_colormap
-```
+
+
