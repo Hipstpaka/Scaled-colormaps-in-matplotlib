@@ -58,7 +58,13 @@ resulting in:
 
 ![rescaled_bwr](https://user-images.githubusercontent.com/37422619/121492655-566bf780-c9d7-11eb-9b48-5cdf0aff115d.png)
 
-Using this rescaled colormap for our data results in:
+The scaling function which is used in colormap_scaling.py can be plotted for different values of the exponent:
+
+![scaling_func](https://user-images.githubusercontent.com/37422619/121532000-3bad7900-c9ff-11eb-95e2-99c712ef6839.png)
+
+Where we can see that the boundary values are unchanged while all other values are shifted closer to 0.5, which corresponds to white for the bwr colormap. The curve for an exponent of one corresponds to a scaling where the colormap is unchanged. 
+
+Using this rescaled colormap with an exponent of 2 for our data results in:
 
 ```
 plt.imshow(data, cmap = scaled_colormap('bwr',2), norm = norm)
