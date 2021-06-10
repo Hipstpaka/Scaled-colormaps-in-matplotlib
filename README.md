@@ -17,7 +17,7 @@ which you want to plot. You could use imshow from matplotlib:
 ```
 import matplotlib.pyplot as plt
 
-plt.imshow(data, vmin = vmin, vmax = vmax, cmap = 'bwr')
+plt.imshow(data, cmap = 'bwr')
 plt.colorbar()
 ```
 This results in the following figure:
