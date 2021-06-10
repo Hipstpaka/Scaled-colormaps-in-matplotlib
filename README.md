@@ -76,4 +76,8 @@ plt.colorbar()
 
 ![small_transition_region](https://user-images.githubusercontent.com/37422619/121493288-f9bd0c80-c9d7-11eb-979a-60f886201cad.png)
 
-To use the function scaled_colormap 
+To use the function scaled_colormap download the file colormap_scaling.py and import the function scaled_colormap with
+
+```
+from colormap_scaling import scaled_colormap
+```
