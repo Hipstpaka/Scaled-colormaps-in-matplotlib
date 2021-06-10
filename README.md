@@ -9,7 +9,7 @@ num_columns=50
 num_rows=50
 data_noise=np.random.normal(0,2*num_rows,(num_rows,num_columns))
 data_without_noise= [[i*j-num_columns*num_rows/3 for i in range(num_columns)] for j in range(num_rows)] 
-data=data_noise+datat_without_noise
+data=data_noise+data_without_noise
 ```
 
 which you want to plot. You could use imshow from matplotlib:
@@ -44,7 +44,7 @@ Now, under certain circumstances it might be advantageous to make the transition
 ```
 scaled_cmap(colormap: str, exponent: float, x_max = 10000) -> ListedColormap
 ```
-achieves. Assume you want to 'rescale' a given colormap, e.g. bwr which looks like:
+from the file colormap_scaling.py in this repository achieves. Assume you want to 'rescale' a given colormap, e.g. bwr:
 
 ![bwr](https://user-images.githubusercontent.com/37422619/121492123-e493ae00-c9d6-11eb-9553-809d06a990b6.png)
 
@@ -53,7 +53,7 @@ Then, to 'spread' the white transition region use the scaled_cmap function with 
 ```
 rescaled_cmap = scaled_cmap('bwr',2)
 ```
-which looks like:
+resulting in:
 
 ![rescaled_bwr](https://user-images.githubusercontent.com/37422619/121492655-566bf780-c9d7-11eb-9b48-5cdf0aff115d.png)
 
