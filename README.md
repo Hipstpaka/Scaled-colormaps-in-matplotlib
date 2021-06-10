@@ -48,7 +48,7 @@ achieves. Assume you want to 'rescale' a given colormap, e.g. bwr which looks li
 
 ![bwr](https://user-images.githubusercontent.com/37422619/121492123-e493ae00-c9d6-11eb-9553-809d06a990b6.png)
 
-Then, to 'spread' the whit transition region use the scaled_cmap function with an exponent larger than 1:
+Then, to 'spread' the white transition region use the scaled_cmap function with an exponent larger than 1:
 
 ```
 rescaled_cmap = scaled_cmap('bwr',2)
